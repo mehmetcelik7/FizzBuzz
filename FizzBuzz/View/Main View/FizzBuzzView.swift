@@ -8,8 +8,28 @@
 import SwiftUI
 
 struct FizzBuzzView: View {
+    let MAX = 100
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ScrollView {
+            LazyVStack {
+                ForEach(0..<MAX,id: \.self) { i in
+                    
+                    if i % 15 == 0 {
+                        NiceText(text: "FizzBuzz")
+
+                    }else if i % 3 == 0 {
+                        NiceText(text: "Fizz")
+
+                    }else if i % 5 == 0 {
+                        NiceText(text: "Buzz")
+
+                    }else{
+                        NiceText(text: "\(i)")
+                    }
+                }
+            }.padding()
+        }
     }
 }
 

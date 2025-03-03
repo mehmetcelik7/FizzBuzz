@@ -11,15 +11,15 @@ struct MainView: View {
     var body: some View {
         TabView{
             
-            BackgroundText(text: "FizzBuzzView", color: .red)
+            FizzBuzzView()
                 .tabItem {
                     Label("FizzBuzz", systemImage: "bubbles.and.sparkles")
                 }
-            BackgroundText(text: "CodeCreaterView", color: .green)
+            CodeCreatorView()
                 .tabItem {
                     Label("Code", systemImage: "note.text")
                 }
-            BackgroundText(text: "AbaoutView", color: .blue)
+            AboutView()
                 .tabItem {
                     Label("About", systemImage: "info.bubble.fill")
                 }
